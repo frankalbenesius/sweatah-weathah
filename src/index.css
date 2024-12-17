@@ -51,6 +51,7 @@ body {
   border-radius: 3px;
   color: white;
   padding: 0.25rem 0;
+  font-family: monospace;
 }
 
 .buttons button:hover {
@@ -78,6 +79,7 @@ body {
   color: white;
   cursor: pointer;
   border: none;
+  font-family: monospace;
 }
 
 .color-selector-item:not(:last-child) {

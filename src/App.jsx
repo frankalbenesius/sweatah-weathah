@@ -3,6 +3,7 @@ import { SweaterSVG } from "./SweaterSVG";
 import { squares } from "./state";
 
 const colors = {
+  WHITE: "#ffffff",
   "478 Amber": "#b44d1f",
   "620 Lilac": "#a199a9",
   "410 Cornfield": "#d78e18",
@@ -15,7 +16,7 @@ const colors = {
 };
 
 const defaultState = {
-  color: "#a199a9",
+  color: colors["478 Amber"],
   borders: true,
   squares: squares.map((sq) => ({
     ...sq,
@@ -38,6 +39,7 @@ function App() {
               key={color}
               className="color-selector-item"
               style={{
+                color: color === "WHITE" ? "black" : "white",
                 background: colors[color],
                 border: `2px dashed ${colors[color]}`,
                 borderColor:
