@@ -21,14 +21,40 @@ body {
   display: flex;
   background: white;
   border: 2px solid black;
+  background: #eee;
 }
 
 .controls {
+  background: white;
   width: 200px;
   flex: 0 0 auto;
   border-right: 2px solid black;
   display: flex;
   flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border-top: 2px solid black;
+}
+
+.buttons button {
+  flex: 1 1 auto;
+  border: none;
+  background: none;
+  color: black;
+  cursor: pointer;
+  text-transform: lowercase;
+  background: darkgray;
+  border-radius: 3px;
+  color: white;
+  padding: 0.25rem 0;
+}
+
+.buttons button:hover {
+  background: gray;
 }
 
 .title {
@@ -48,7 +74,7 @@ body {
   flex: 1 0 auto;
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem;
   color: white;
   cursor: pointer;
   border: none;

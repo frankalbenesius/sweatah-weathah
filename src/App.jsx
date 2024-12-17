@@ -16,6 +16,7 @@ const colors = {
 
 const defaultState = {
   color: "#a199a9",
+  borders: true,
   squares: squares.map((sq) => ({
     ...sq,
     color: "white",
@@ -30,6 +31,7 @@ function App() {
     <div className="app">
       <div className="controls">
         <div className="title">amanda&#39;s sweater color picker</div>
+
         <div className="color-selector">
           {Object.keys(colors).map((color) => (
             <button
@@ -46,6 +48,23 @@ function App() {
               {color}
             </button>
           ))}
+        </div>
+        <div className="buttons">
+          <button
+            onClick={() =>
+              setState((s) => ({
+                ...s,
+                squares: defaultState.squares,
+              }))
+            }
+          >
+            Reset colors
+          </button>
+          <button
+            onClick={() => setState({ ...state, borders: !state.borders })}
+          >
+            Toggle Borders
+          </button>
         </div>
       </div>
       <div className="sweater-container">

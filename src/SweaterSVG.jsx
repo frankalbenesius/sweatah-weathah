@@ -12,7 +12,7 @@ export const SweaterSVG = ({ state, setState }) => {
       <g
         clipPath="url(#clip0_447_126)"
         stroke="black"
-        strokeWidth="6"
+        strokeWidth={state.borders ? "6" : "0"}
         strokeMiterlimit="10"
       >
         {state.squares.map((square, i) => (
