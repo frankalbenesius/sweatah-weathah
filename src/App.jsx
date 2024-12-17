@@ -3,13 +3,13 @@ import { SweaterSVG } from "./SweaterSVG";
 import { squares } from "./state";
 
 const colors = {
+  "478 Amber": "#b44d1f",
   "620 Lilac": "#a199a9",
   "410 Cornfield": "#d78e18",
   "240 Yell Sound Blue": "#809595",
   "103 Sholmit": "#76746a",
   "580 Cherry": "#641625",
   "791 Pistachio": "#918646",
-  "478 Amber": "#b44d1f",
   "665 Bluebell": "#526c9f",
   "271 Flame": "#d36456",
 };
