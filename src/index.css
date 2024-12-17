@@ -52,6 +52,7 @@ body {
   color: white;
   padding: 0.25rem 0;
   font-family: monospace;
+  font-size: 0.9rem;
 }
 
 .buttons button:hover {

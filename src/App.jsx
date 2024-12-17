@@ -28,6 +28,31 @@ function App() {
   const [state, setState] = useState({
     ...defaultState,
   });
+
+  const randomizeSquareColors = () => {
+    function shuffle(array) {
+      for (let i = array.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    const colorValues = Object.values(colors).filter((c) => c !== colors.WHITE);
+    shuffle(colorValues);
+    const arrayOfColors = [];
+    for (let i = 0; i < state.squares.length; i++) {
+      arrayOfColors.push(colorValues[i % colorValues.length]);
+    }
+    shuffle(arrayOfColors);
+    setState((s) => ({
+      ...s,
+      squares: arrayOfColors.map((color, i) => ({
+        ...s.squares[i],
+        color,
+      })),
+    }));
+  };
+
   return (
     <div className="app">
       <div className="controls">
@@ -67,6 +92,7 @@ function App() {
           >
             Toggle Borders
           </button>
+          <button onClick={randomizeSquareColors}>randomize</button>
         </div>
       </div>
       <div className="sweater-container">
