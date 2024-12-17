@@ -27,10 +27,47 @@ body {
   width: 200px;
   flex: 0 0 auto;
   border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+  text-align: center;
+  color: black;
+}
+.color-selector {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.color-selector-item {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.color-selector-item:not(:last-child) {
+  border-bottom: 2px solid black;
+}
+
+.color-selector-item:hover {
+  border-right: 4px solid black;
 }
 
 .sweater-container {
   padding: 1rem;
   flex: 1 1 auto;
   display: flex;
+}
+
+.square {
+  cursor: pointer;
 }
